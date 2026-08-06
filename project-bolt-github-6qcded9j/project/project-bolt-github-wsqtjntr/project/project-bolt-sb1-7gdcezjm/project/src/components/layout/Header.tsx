@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { Glasses, Search, ShoppingBag, User, Shield } from 'lucide-react';
+import { Glasses, Search, ShoppingBag, User, Shield, Heart } from 'lucide-react';
 import { useCart, useAuth } from '@/context';
 import { cx } from '@/lib/utils';
 
@@ -72,6 +72,13 @@ export function Header() {
             className="rounded-md p-2.5 text-ink-600 transition-colors hover:bg-ink-100 hover:text-ink-900"
           >
             <User size={20} />
+          </Link>
+          <Link
+            to="/wishlist"
+            aria-label="Wishlist"
+            className="rounded-md p-2.5 text-ink-600 transition-colors hover:bg-ink-100 hover:text-ink-900"
+          >
+            <Heart size={20} />
           </Link>
           <Link
             to="/cart"
